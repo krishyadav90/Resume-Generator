@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRISH YADAV - Resume</title>
+  <style>
+    :root {
+      --text: #111;
+      --muted: #444;
+      --line: #1a1a1a;
+      --bg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Calibri", "Arial", sans-serif;
+      font-size: 11pt;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto;
+      background: var(--bg);
+      padding: 2px 4px 3px;
+      border: none;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .action-btn {
+      display: inline-block;
+      border: 1px solid #134fc4;
+      color: #134fc4;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background: #eef4ff;
+    }
+
+    .name {
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 1px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 3px;
+      font-weight: 600;
+    }
+
+    .contact {
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 3px;
+      word-break: break-word;
+    }
+
+    a, a:visited {
+      color: #134fc4;
+    }
+
+    .contact a {
+      color: #134fc4;
+      text-decoration: underline;
+    }
+
+    section { margin-top: 10px; }
+
+    h2 {
+      margin: 0 0 2px;
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 1px;
+    }
+
+    p { margin: 0; }
+
+    .item { margin-bottom: 2px; }
+
+    .item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-weight: 600;
+      flex-wrap: nowrap;
+      align-items: baseline;
+    }
+
+    .item-head > div:first-child {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .item-head > div:last-child {
+      white-space: nowrap;
+      flex: 0 0 auto;
+      margin-left: 10px;
+      text-align: right;
+    }
+
+    .sub {
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .single-line {
+      white-space: nowrap;
+    }
+
+    .cert-item {
+      margin-bottom: 1px;
+    }
+
+    .cert-sub {
+      margin-left: 12px;
+    }
+
+    .cert-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      flex-wrap: nowrap;
+    }
+
+    .cert-head > div:first-child {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .cert-head > div:last-child {
+      white-space: nowrap;
+      flex: 0 0 auto;
+      margin-left: 10px;
+      text-align: right;
+    }
+
+    .cert-date {
+      font-weight: 700;
+      white-space: nowrap;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    ul {
+      margin: 1px 0 0 16px;
+      padding: 0;
+    }
+
+    li { margin-bottom: 0; }
+
+    @page {
+      size: A4;
+      margin: 1mm;
+    }
+
+    @media print {
+      .actions {
+        display: none;
+      }
+
+      html, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .action-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="actions">
+      <a class="action-btn" href="resume_output.html" download="KRISH_YADAV_Resume.html">Download HTML</a>
+      <button class="action-btn" type="button" onclick="window.print()">Download PDF</button>
+    </div>
+
+    <div class="name">KRISH YADAV</div>
+    <div class="title">Cyber Security Analyst</div>
+    <div class="contact">
+      +91 99992 23866 |
+      <a href="https://github.com/krishyadav90">https://github.com/krishyadav90</a> |
+      <a href="mailto:krishyada9865@gmail.com">krishyada9865@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/krishyadav38ky67/">krish</a>
+    </div>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Cyber Security Analyst with hands-on SOC-focused project experience in SIEM monitoring, incident triage and response, log correlation, and security event analysis. Skilled in Splunk, ELK Stack, Wazuh, Python, and Flask, with applied MITRE ATT&amp;CK mapping and threat hunting practices. Built phishing detection systems with 95.6% overall accuracy and significant false-positive reduction in email classification.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <p><strong>Cyber Security Tools:</strong> ELK Stack, Wazuh, Sysmon, Suricata, VirusTotal API, AlienVault OTX</p>
+<p><strong>Security Skills:</strong> SIEM, Splunk, Log Analysis, Log Correlation, Alert Monitoring, Security Event Analysis, Threat Detection, Incident Triage, Incident Response, MITRE ATT&amp;CK, Threat Hunting, IDS/IPS, Network Security, Phishing Analysis, Malware Detection, Threat Intelligence, SOC Operations</p>
+<p><strong>Programming:</strong> Python, JavaScript, HTML5, CSS3, React.js, Flask</p>
+<p><strong>Databases:</strong> MySQL, Supabase</p>
+<p><strong>Other Tools:</strong> Git, GitHub, VS Code, Microsoft Office 365, Kali Linux, VirtualBox</p>
+<p><strong>Other Skills:</strong> Leadership, Problem Solving, Teamwork, Creativity, Eagerness to learn and explore new technologies</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      
+            <div class="item">
+                <div class="item-head">
+                    <div>
+          <strong>Bootcamp at Sharda University</strong>
+                    </div>
+                    <div>May 2025 - July 2025</div>
+                </div>
+                <div class="sub">Greater Noida, India</div>
+                <ul>
+                    <li>Collaborated with a team to develop TravelEase, an intelligent travel planning web application with personalized trip features and cost optimization.</li>
+<li>Developed a secure, responsive React.js interface that improved cross-device accessibility and reduced common client-side security risks.</li>
+<li>Integrated an AI-powered chatbot and contributed to feature planning, iterative testing, and problem-solving during development cycles.</li>
+                </ul>
+            </div>
+            
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      
+            <div class="item">
+                <div class="item-head">
+                    <div>
+              <strong>ThreatSpectra</strong>
+                    </div>
+                    <div>Feb 2026 - March 2026</div>
+                </div>
+            <div class="sub single-line"><strong>Technologies: Python, Flask, scikit-learn, Pillow, zxing-cpp, pyzbar, HTML, CSS, JavaScript, Bootstrap</strong></div>
+                <div class="sub single-line"><strong>Project Link:</strong> <a href="https://github.com/krishyadav90/ThreatSpectra">https://github.com/krishyadav90/ThreatSpectra</a></div>
+                <ul>
+                    <li>Built a phishing detection system for email, SMS, and websites, achieving 95.6% overall accuracy and 96.8% average accuracy.</li>
+<li>Reduced false positives by about 70% (20% to 6%) in email classification, lowering overall FPR to about 5.8%.</li>
+<li>Developed Flask APIs with CORS for URL, email, SMS, and QR-based threat evaluation in a unified scanner workflow.</li>
+<li>Integrated machine learning pipelines using Random Forest, feature-based email analysis, and TF-IDF SMS phishing classification.</li>
+<li>Implemented QR decoding with Pillow, zxing-cpp, and pyzbar using fallback preprocessing to detect malicious links from uploaded images.</li>
+                </ul>
+            </div>
+            
+            <div class="item">
+                <div class="item-head">
+                    <div>
+              <strong>SOC Monitoring System</strong>
+                    </div>
+                    <div>Mar 2026 - Present</div>
+                </div>
+            <div class="sub single-line"><strong>Technologies: Python, Flask, SIEM Concepts, Machine Learning</strong></div>
+                
+                <ul>
+                    <li>Implemented SOC-style log monitoring pipelines to analyze network and system events for suspicious activity detection.</li>
+<li>Built rule-based and machine learning-assisted alert generation logic to improve threat detection coverage across monitored events.</li>
+<li>Integrated threat intelligence context using sources such as SIEM feeds and IDS-related telemetry to enrich investigation signals.</li>
+<li>Developed a security dashboard for alert monitoring, threat visualization, and analyst-friendly incident review workflows.</li>
+<li>Automated response-oriented actions, including IP blocking and alert notification flows, to support incident response operations.</li>
+                </ul>
+            </div>
+            
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      
+          <div class="cert-item">
+            <div class="cert-head">
+              <div><strong>Udemy</strong></div>
+              <div class="cert-date">May 2024 - July 2024</div>
+            </div>
+            <div class="cert-sub">The Complete 2024 Web Development Bootcamp (Dr. Angela Yu, 61.5 hours) - <a href="https://www.udemy.com/certificate/UC-533377de-96e6-4eb9-9388-dd8effcd4779/">Link</a></div>
+          </div>
+          
+
+          <div class="cert-item">
+            <div class="cert-head">
+              <div><strong>Skill India Digital Hub</strong></div>
+              <div class="cert-date">Sep 2025</div>
+            </div>
+            <div class="cert-sub">IoT-Network Specialist Certificate Programme (Reliance Foundation Skilling Academy, 60 Hours) - <a href="https://skill-india-dev.s3.ap-south-1.amazonaws.com/certificate_generic/uploaded_elements/2025071518750342/certificate_034ff754-a0c2-40fe-9fc8-d0ec2000588d.pdf?response-content-disposition=inline&amp;response-content-type=application%2Fpdf&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20260330T101506Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=2000&amp;X-Amz-Credential=AKIA3OJCFBJTPLAN4OGU%2F20260330%2Fap-south-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=011b16c96b831de54c775349642a6105671141d8e3c4abf684e9b4575921a605">Link</a></div>
+          </div>
+          
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      
+      <div class="cert-head">
+        <div><strong>SHARDA University, Bachelor of Technology in Computer Science, Greater Noida, India</strong></div>
+        <div class="cert-date">Aug 2023 - May 2027</div>
+      </div>
+      
+    </section>
+  </main>
+</body>
+</html>
