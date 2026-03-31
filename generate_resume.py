@@ -251,7 +251,7 @@ def render_resume(data: dict) -> str:
 
     * {{
       box-sizing: border-box;
-      font-family: "Calibri", "Arial", sans-serif;
+      font-family: "Calibri";
       font-size: 11pt;
     }}
 
