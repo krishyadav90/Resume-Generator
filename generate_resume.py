@@ -464,7 +464,7 @@ def render_resume(data: dict) -> str:
     </section>
 
     <section>
-      <h2>Experience</h2>
+      <h2>Training & Experience</h2>
       {''.join(experience_html)}
     </section>
 

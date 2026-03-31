@@ -38,7 +38,7 @@ Update the `RESUME_DATA` dictionary in `generate_resume.py`:
 - Personal details (`name`, `title`, `phone`, `email`, links)
 - `summary`
 - `skills`
-- `experience`
+- `Training & experience`
 - `projects`
 - `certifications`
 - `education`
