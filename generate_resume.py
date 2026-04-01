@@ -4,7 +4,7 @@ from html import escape
 
 RESUME_DATA = {
     "name": "KRISH YADAV",
-    "title": "Cyber Security Analyst",
+  "title": "Cyber Security Analyst | SIEM | Threat Detection | SOC Operations",
     "phone": "+91 99992 23866",
     "email": "krishyada9865@gmail.com",
     "github": "https://github.com/krishyadav90",
@@ -121,7 +121,7 @@ RESUME_DATA = {
         {
           "title": "Skill India Digital Hub | IoT-Network Specialist Certificate Programme (Reliance Foundation Skilling Academy, 60 Hours)",
           "date": "Sep 2025",
-          "link": "https://skill-india-dev.s3.ap-south-1.amazonaws.com/certificate_generic/uploaded_elements/2025071518750342/certificate_034ff754-a0c2-40fe-9fc8-d0ec2000588d.pdf?response-content-disposition=inline&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20260330T101506Z&X-Amz-SignedHeaders=host&X-Amz-Expires=2000&X-Amz-Credential=AKIA3OJCFBJTPLAN4OGU%2F20260330%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Signature=011b16c96b831de54c775349642a6105671141d8e3c4abf684e9b4575921a605",
+          "link": "https://drive.google.com/file/d/1v_5YSvuZC4twgwb_55fQtfSlI6HptL_9/view?usp=sharing",
           "link_label": "Link",
         },
     ],
@@ -441,9 +441,8 @@ def render_resume(data: dict) -> str:
   <main class=\"page\">
     <div class=\"actions\">
       <a class=\"action-btn\" href=\"resume_output.html\" download=\"KRISH_YADAV_Resume.html\">Download HTML</a>
-      <button class=\"action-btn\" type=\"button\" onclick=\"window.print()\">Download PDF</button>
+      <button class=\"action-btn\" type=\"button\" onclick=\"previewAndDownloadPDF()\">Download PDF</button>
     </div>
-
     <div class=\"name\">{escape(data['name'])}</div>
     <div class=\"title\">{escape(data['title'])}</div>
     <div class=\"contact\">
@@ -483,6 +482,50 @@ def render_resume(data: dict) -> str:
       {education_html}
     </section>
   </main>
+
+  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js\"></script>
+  <script>
+    async function previewAndDownloadPDF() {{
+      const source = document.querySelector('.page');
+      const actions = source.querySelector('.actions');
+      const previousDisplay = actions ? actions.style.display : '';
+      if (actions) actions.style.display = 'none';
+
+      try {{
+        const marginX = 8;
+        const marginY = 2;
+        const opt = {{
+          margin: [marginY, marginX, marginY, marginX],
+          filename: 'KRISH_YADAV_Resume.pdf',
+          image: {{ type: 'jpeg', quality: 0.95 }},
+          html2canvas: {{
+            scale: 2,
+            useCORS: true,
+            backgroundColor: '#ffffff',
+            scrollX: 0,
+            scrollY: 0,
+            windowWidth: document.documentElement.scrollWidth
+          }},
+          jsPDF: {{ unit: 'mm', format: 'a4', orientation: 'portrait' }},
+          pagebreak: {{ mode: ['css', 'legacy'] }},
+          enableLinks: true
+        }};
+
+        const worker = html2pdf().set(opt).from(source);
+        const pdf = await worker.toPdf().get('pdf');
+
+        const previewUrl = pdf.output('bloburl');
+        window.open(previewUrl, '_blank');
+
+        const shouldDownload = window.confirm('Preview opened in a new tab. Click OK to download PDF now, or Cancel to skip download.');
+        if (shouldDownload) {{
+          pdf.save('KRISH_YADAV_Resume.pdf');
+        }}
+      }} finally {{
+        if (actions) actions.style.display = previousDisplay || 'flex';
+      }}
+    }}
+  </script>
 </body>
 </html>
 """
